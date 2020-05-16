@@ -31,7 +31,7 @@ namespace rabbitmq
                 {
                     var body = ea.Body;
                     var message = Encoding.UTF8.GetString(body.ToArray());
-                    Console.WriteLine($" {ea.RoutingKey} [x] Received {message}  ");
+                    Console.WriteLine($" {ea.RoutingKey} [x] Received {message}");
                 };
                 channel.BasicConsume(queue: "hello",
                                      autoAck: true,
